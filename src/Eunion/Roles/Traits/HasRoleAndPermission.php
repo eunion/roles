@@ -55,7 +55,7 @@ trait HasRoleAndPermission
             return $this->pretend('is');
         }
 
-        return $this->{$this->getMethodName('is', $all)}($role);
+        return $this->{$this->getMethodName('isRole', $all)}($role);
     }
 
     /**
