@@ -49,7 +49,7 @@ trait HasRoleAndPermission
      * @param bool $all
      * @return bool
      */
-    public function is($role, $all = false)
+    public function isRole($role, $all = false)
     {
         if ($this->isPretendEnabled()) {
             return $this->pretend('is');
