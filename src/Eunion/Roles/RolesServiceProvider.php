@@ -44,7 +44,7 @@ class RolesServiceProvider extends ServiceProvider
         $blade = $this->app['view']->getEngineResolver()->resolve('blade')->getCompiler();
 
         $blade->directive('role', function ($expression) {
-            return "<?php if (Auth::guard('manager')->check() && Auth::guard('manager')->user()->is{$expression}): ?>";
+            return "<?php if (Auth::guard('manager')->check() && Auth::guard('manager')->user()->isRole{$expression}): ?>";
         });
 
         $blade->directive('endrole', function () {
