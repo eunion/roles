@@ -250,7 +250,7 @@ trait HasRoleAndPermission
     public function hasPermission($permission)
     {
         return $this->getPermissions()->contains(function ($key, $value) use ($permission) {
-            return $permission == $value->id || Str::is($permission, $value->slug);
+            return $permission == $key->id || Str::is($permission, $key->slug);
         });
     }
 
